@@ -4,8 +4,8 @@ import altair as alt
 
 
 st.set_page_config(
-    page_title="Inicio",
-    page_icon="🏡",
+    page_title="Oficina de Atención Ciudadana - Inicio",
+    page_icon="🏦",
     layout="wide",
 )
 
