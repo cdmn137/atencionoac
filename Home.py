@@ -9,7 +9,11 @@ st.set_page_config(
     layout="wide",
 )
 
-st.write("# Bienvenidos a la OAC! ✨")
+st.write("""
+         # Bienvenidos a la OAC! ✨
+         Fondo de Compensación Interterritorial\n
+        Consejo Federal de Gobierno
+         """)
 
 def load_data():
     # ----------> Leer Bases de Datos
