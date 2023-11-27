@@ -4,15 +4,12 @@ import altair as alt
 
 
 st.set_page_config(
-    page_title="Oficina de Atención Ciudadana - Inicio",
+    page_title="Oficina de Atención Ciudadana CFG-FCI",
     page_icon="🏢",
     layout="wide",
 )
 
 st.write("# Bienvenidos a la OAC! ✨")
-
-#st.sidebar.success("Seleccione una Opción.")
-
 
 def load_data():
     # ----------> Leer Bases de Datos
@@ -51,22 +48,6 @@ def load_data():
 
 df = load_data()
 
-st.markdown(
-    """
-    Esta es la pagina de inicio donde se mostrara la introduccion de las actividades realizadas en la OAC. Entre las cuales podemos mencionar:
-    - Atención al Poder Popular de forma presencial.
-        * Atención en los espacios destinados para ello de los/las voceros(as) de las Organizaciones.
-        * Verificación de su solicitud en el Sistema SINCO.
-        * levantamiento de minuta de reunion y acuerdos con los voceros.
-        * Envio de comunicación informativa y de agradecimiento por haber asistido a nuestras oficinas.
-    - Atencion al Poder Popular a traves del sistema SINCO
-        * Recepción y revisión de las solicitudes realizadas atraves del sistema SINCO.
-        * Asignación a la dirección que le corresponda o al analista responsable de dar respuesta.
-        * El analista asignado debe generar una respuesta para enviar a la organización.
-        * El Responsable del caso debe aprobar la respuesta generada por el analista y enviar a la organización.
-"""
-)
-
 def info_general():
         col1, col2 = st.columns([0.3, 0.7])
         with col2:
@@ -101,3 +82,37 @@ def info_general():
 st.title('Informacion general de los casos atendidos a traves del Sistema SINCO')
 info_general()
 st.write('Información extraida de la B.D. del Sistema SINCO 2.0 correspondiente al periodo del 18/07/2022 hasta la fecha.')
+
+st.write("## Sistema SINCO ")
+acerca, app, help  = st.columns([0.25, 0.25, 0.50])
+with acerca:
+     st.write("### ¿Como Funciona?")
+     st.link_button("Ingresa aqui! - SINCO", "https://www.sinco.gob.ve/acerca")
+
+with app:
+     st.write("### SINCO App")
+     st.link_button("SINCO App - Descargala aqui!", "https://play.google.com/store/apps/details?id=org.alcaravan.sincoobpp")
+
+with help:
+     st.write("### Inconvenientes con el Registro!")
+     st.write("Si por alguna razon no puedes ingresar al sistema, puedes escribir por este medio.")
+     st.link_button("Contactenos!", "https://www.sinco.gob.ve/contactus")
+
+st.write("## ¿Como funciona la OAC CFG-FCI? ")
+st.markdown(
+    """
+    En la Oficina de Atención Ciudadana (OAC), del Consejo Federal de Gobierno (CFG) - Fondo de Compensación Interterritorial (FCI), 
+    se atiende a los voceros del Poder Popular ya sea via presencial o a traves del Sistema de Integración y Comunicación (SINCO), dicha
+    atención se realiza de la siguiente forma:
+    - Atención al Poder Popular de forma presencial.
+        * Atención en los espacios destinados para ello de los/las voceros(as) de las Organizaciones.
+        * Verificación de su solicitud en el Sistema SINCO.
+        * levantamiento de minuta de reunion y acuerdos con los voceros.
+        * Envio de comunicación informativa y de agradecimiento por haber asistido a nuestras oficinas.
+    - Atencion al Poder Popular a traves del sistema SINCO
+        * Recepción y revisión de las solicitudes realizadas atraves del sistema SINCO.
+        * Asignación a la dirección que le corresponda o al analista responsable de dar respuesta.
+        * El analista asignado debe generar una respuesta para enviar a la organización.
+        * El Responsable del caso debe aprobar la respuesta generada por el analista y enviar a la organización.
+"""
+)
