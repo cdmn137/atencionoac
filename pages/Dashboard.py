@@ -33,8 +33,8 @@ def load_data():
     df =  df.loc[~df["Transmisor/Nombre"].str.contains("prueba"), ]
     df = df.dropna(subset=["Estatus"])
     df.loc[df["Asignado/Asignado/Nombre"].isna(), "Asignado/Asignado/Nombre"] = "Ninguno"
-    df["Categoría/Nombre de categoría"] = df["Categoría/Nombre de categoría"].astype(str)
-    df =  df.loc[~df["Categoría/Nombre de categoría"].str.contains("False"), ]
+    # df["Categoría/Nombre de categoría"] = df["Categoría/Nombre de categoría"].astype(str)
+    # df =  df.loc[~df["Categoría/Nombre de categoría"].str.contains("False"), ]
     #  Fin de leer Bases de Datos <--------------------------------------------------------
 
     # ----------> Traducir los estatus
